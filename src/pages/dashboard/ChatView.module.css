@@ -1,0 +1,127 @@
+.container {
+    padding: var(--spacing-md);
+    padding-bottom: 80px;
+    /* Navbar height + spacing */
+}
+
+.header {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.matchRow {
+    display: flex;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    scrollbar-width: none;
+}
+
+.matchRow::-webkit-scrollbar {
+    display: none;
+}
+
+.newMatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    min-width: 70px;
+}
+
+.matchAvatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-primary);
+    padding: 2px;
+    background: var(--color-background);
+}
+
+.matchName {
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70px;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.chatList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.chatItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chatAvatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chatContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.time {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.message {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    margin-left: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.expires {
+    font-size: 0.7rem;
+    color: var(--color-error);
+    margin-top: 0.25rem;
+    opacity: 0.8;
+}
