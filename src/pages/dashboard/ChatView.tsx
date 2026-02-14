@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card } from '../../components/ui/Card';
 import { MOCK_CHATS } from '../../data/mockData';
 import styles from './ChatView.module.css';
 
 export const ChatView: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.container}>
             <h2 className={styles.header}>Matches & Chats</h2>
@@ -26,7 +29,12 @@ export const ChatView: React.FC = () => {
             <div className={styles.chatList}>
                 <h3 className={styles.sectionTitle}>Messages</h3>
                 {MOCK_CHATS.map(chat => (
-                    <Card key={chat.id} className={styles.chatItem} interactive>
+                    <Card
+                        key={chat.id}
+                        className={styles.chatItem}
+                        interactive
+                        onClick={() => navigate(`/dashboard/chat/${chat.id}`)}
+                    >
                         <img src={chat.matchImage} alt={chat.matchName} className={styles.chatAvatar} />
                         <div className={styles.chatContent}>
                             <div className={styles.chatHeader}>

@@ -1,0 +1,245 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.backButton {
+    margin-bottom: 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero svg {
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.pricingCard {
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricingCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+}
+
+.pricingCard.selected {
+    border-color: var(--color-primary);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.pricingCard.popular {
+    border-color: var(--color-primary);
+}
+
+.popularBadge,
+.discountBadge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.discountBadge {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+    transform: none;
+    background: var(--color-success);
+}
+
+.pricingCard h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: var(--color-text);
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.period {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-left: 0.25rem;
+}
+
+.features {
+    margin-bottom: 2rem;
+}
+
+.features h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+}
+
+.feature span {
+    color: var(--color-text);
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Comparison View */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.comparisonGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.comparisonCard {
+    padding: 2rem;
+    position: relative;
+}
+
+.comparisonCard.premium {
+    border: 2px solid var(--color-primary);
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.comparisonCard h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+.comparisonCard .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.comparisonCard .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 1rem;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.featureList li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.featureList li.unavailable {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+    .pricingGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

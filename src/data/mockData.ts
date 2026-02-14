@@ -7,6 +7,7 @@ export interface Profile {
     job: string;
     distance: number;
     prompts: { question: string; answer: string }[];
+    interests?: string[];
     isVerified: boolean;
 }
 
@@ -26,6 +27,7 @@ export const MOCK_PROFILES: Profile[] = [
             { question: 'My simple pleasure', answer: 'Morning coffee ☕️' },
             { question: 'I go crazy for', answer: 'Spicy food 🌶️' }
         ],
+        interests: ['Coffee', 'Dogs', 'Art', 'Yoga', 'Travel'],
         isVerified: true
     },
     {
@@ -42,6 +44,7 @@ export const MOCK_PROFILES: Profile[] = [
         prompts: [
             { question: 'Best travel story', answer: 'Got lost in Tokyo, found the best ramen ever.' }
         ],
+        interests: ['Photography', 'Travel', 'Foodie', 'Hiking', 'Museums'],
         isVerified: true
     },
     {
@@ -55,6 +58,7 @@ export const MOCK_PROFILES: Profile[] = [
         job: 'Student',
         distance: 12,
         prompts: [],
+        interests: ['Netflix', 'Cats', 'Baking', 'True Crime', 'K-Pop'],
         isVerified: false
     },
     {
@@ -70,6 +74,7 @@ export const MOCK_PROFILES: Profile[] = [
         prompts: [
             { question: 'I geek out on', answer: 'AI and Robotics' }
         ],
+        interests: ['Tech', 'Coding', 'Gym', 'Gaming', 'Crypto'],
         isVerified: true
     }
 ];
